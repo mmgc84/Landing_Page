@@ -1,0 +1,22 @@
+//remove default stiles of our browsers
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body {
+        font-family: sans-serif;
+    }
+}
+
+.products {
+    display: flex;
+}
+
+@media (max-width: 650px){
+
+    body {
+        font-family: sans-serif;
+    }
+
+}
