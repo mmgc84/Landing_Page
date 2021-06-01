@@ -26,7 +26,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header__image {
@@ -77,6 +80,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 6vh;
 }
 
 .aboutus {
