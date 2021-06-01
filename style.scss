@@ -5,18 +5,352 @@
     box-sizing: border-box;
 
     body {
+        background-color: #EEEEEE;
         font-family: sans-serif;
+    }
+}
+
+.header {
+    background-color: #EEEEEE;
+    height: 6vh;
+    // border: 2px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+
+    &__image {
+        display: flex;
+        flex-direction: row;
+        // border: 2px solid red;
+
+        width: auto;
+        height: 100%;    
+        margin-left: 25px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        // border: 2px solid green;
+        font-size: 1.2vw;
+        margin-right: 25px;
+        gap: 25px;
+
+        &__link {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    [class^="header__menu"] {
+        list-style-type: none;
+    }
+
+    &__menu__link {
+        text-decoration: none;
+    }
+}
+
+.container {
+    // border: 2px solid blue;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutus {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+
+    &__video {
+        width: 25vw;
+    }
+}
+
+.contactus {
+    // border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 20vh;
+    
+    &__header {
+        font-size: 1.5vw;
+        margin-bottom: 5px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__email__input {
+            font-size: 1vw;
+            padding: 5px 5px;
+        }
+
+        &__submit__button {
+            font-size: 1vw;
+            color: white;
+            background-color:#242153;
+            border: 0;
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
     }
 }
 
 .products {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    // border: 2px solid black;
+
+    height: 40vh;
+
+    &__grid {
+        display: flex;
+        flex-direction: row;
+        width: 55vw;
+
+        [class^="products__grid__img"] {
+
+            // border: 2px solid magenta;    
+            flex-basis: 15vw;
+            height: 10vh;
+
+            // background-image: url("./images/smart_bulbs.png");
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+ 
+        }
+
+        [class^="products__grid__desc"] {
+            //border: 2px solid magenta;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-basis: 40vw;
+            height: 10vh;
+
+            h2 {
+                font-size: 1.5vw;
+            }
+
+            p { 
+                font-size: 1vw;
+            }            
+        }
+
+        &__img-1 {
+            background-image: url("./images/smart_bulbs.png");
+        }
+
+        &__img-2 {
+            background-image: url("./images/smart_switches.png");
+        }
+
+        &__img-3 {
+            background-image: url("./images/smart_plugs.png");
+        }
+
+    }
+}
+
+.pricing {
+    // border: 2px solid cyan;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+    &__kit__pack {
+        border: 1px solid black;
+        
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        text-align: center;
+
+        width: 15vw;
+        height: 35vh;
+
+        &__name {
+            background-color: #ddd;
+            padding: 15px 0;
+            width: 100%;
+            font-size: 1vw;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        &__price {
+            font-size: 1.5vw;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+
+        &__desc {
+            // border: 1px solid black;
+            font-size: 1vw;
+            height: 15vh;
+            margin-top: 15px;
+            ol {
+                list-style: none;
+            }
+
+        }
+
+        &__select {
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            &__button {
+            font-size: 1vw;
+            color: white;
+            background-color:#242153;
+            border: 0;
+            padding: 5px 10px;
+            }
+
+        }
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    background-color: #DDDDDD;
+    text-align: center;
 }
 
 @media (max-width: 650px){
 
     body {
-        font-family: sans-serif;
+        // background-color: red;
+    }
+
+    .header {
+    
+        justify-content: center;
+
+        &__image {
+            display: none;
+        }
+
+        &__menu {
+            font-size: 3vw;
+        }
+    
+    }
+
+    .aboutus {
+        &__video {
+            width: 50vw;
+        }
+    }
+
+    .contactus {  
+        
+        &__header {
+            font-size: 3.5vw;
+            margin-bottom: 5px;
+        }
+    
+        &__form {
+    
+            &__email__input {
+                font-size: 2.5vw;
+                padding: 5px 5px;
+            }
+    
+            &__submit__button {
+                font-size: 2.5vw;
+                margin-top: 10px;
+                padding: 5px 10px;
+            }
+    
+        }
+    }
+
+    .products {    
+        // border: 2px solid black;
+ 
+        &__grid {
+            // border: 2px solid blue;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+                
+            [class^="products__grid__img"] {
+                // border: 2px solid magenta;     
+            }
+
+            [class^="products__grid__desc"]{
+                // border: 2px solid magenta;
+                flex-basis: 20vw;
+                h2 {
+                    font-size: 2.5vw;
+                }
+    
+                p { 
+                    display: none;
+                }             
+            }
+        }
+    }
+
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+
+        &__kit__pack {
+            border: 1px solid black;
+    
+            width: 40vw;
+            height: 30vh;
+    
+            &__name {
+                font-size: 3vw;
+            }
+    
+            &__price {
+                font-size: 5vw;
+            }
+    
+            &__desc {
+                font-size: 3.5vw;
+            }
+    
+            &__select {
+
+                &__button {
+                font-size: 3vw;
+                }
+            }
+        }
     }
 
 }
